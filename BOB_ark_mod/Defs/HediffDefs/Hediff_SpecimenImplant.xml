@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef>
+		<defName>BOB_SpecimenImplant</defName>
+		<label>specimen implant</label>
+		<labelNoun>a specimen implant</labelNoun>
+		<description>TODO</description>
+		<descriptionHyperlinks><ThingDef>BOB_SpecimenImplant</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>BOB_SpecimenImplant</spawnThingOnRemoved>
+		<defaultLabelColor>(1.0, 0.8, 0.6)</defaultLabelColor>
+		<isBad>false</isBad>
+		<priceImpact>true</priceImpact>
+		<countsAsAddedPartOrImplant>true</countsAsAddedPartOrImplant>
+		
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="BOB_ArkMod.HediffCompProperties_SpecimenImplant"/>
+		</comps>
+	</HediffDef>
+  
+</Defs>

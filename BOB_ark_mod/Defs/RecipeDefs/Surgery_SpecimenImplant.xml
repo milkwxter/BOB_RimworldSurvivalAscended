@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>BOB_InstallSpecimenImplant</defName>
+    <label>install specimen implant</label>
+    <description>Install a specimen implant.</description>
+    <descriptionHyperlinks>
+      <ThingDef>BOB_SpecimenImplant</ThingDef>
+      <HediffDef>BOB_SpecimenImplant</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing specimen implant.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BOB_SpecimenImplant</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>BOB_SpecimenImplant</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Arm</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BOB_SpecimenImplant</addsHediff>
+    <uiIconThing>BOB_SpecimenImplant</uiIconThing>
+  </RecipeDef>
+  
+</Defs>

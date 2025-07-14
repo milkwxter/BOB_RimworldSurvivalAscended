@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="BodyPartBase">
+    <defName>BOB_SpecimenImplant</defName>
+    <label>specimen implant</label>
+    <description>TODO</description>
+    <descriptionHyperlinks><RecipeDef>BOB_InstallSpecimenImplant</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <Mass>0.3</Mass>
+    </statBases>
+	<uiIconScale>1.5</uiIconScale>
+	
+	<techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>BodyPartsBionic</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Items/m_specimen_implant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.20</drawSize>
+    </graphicData>
+  </ThingDef>
+  
+</Defs>
