@@ -16,6 +16,7 @@ namespace BOB_ArkMod
             if (__instance == null || __instance.Faction == Faction.OfPlayer) return;
 
             // early return if the victim does not have the ARK boss comp
+            if (__instance.TryGetComp<Comp_ArkBossMarker>() == null) return;
 
             // create list that stores everyone who should get credit for the fight
             HashSet<Pawn> credited = new HashSet<Pawn>();

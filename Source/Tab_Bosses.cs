@@ -78,6 +78,8 @@ namespace BOB_ArkMod
                     // temp spawn logic
                     Pawn specimenPawn = comp.Pawn;
                     Pawn bossPawn = PawnGenerator.GeneratePawn(PawnKindDef.Named(boss.defName));
+                    if (!bossPawn.AllComps.Any(c => c is Comp_ArkBossMarker))
+                        bossPawn.AllComps.Add(new Comp_ArkBossMarker());
                     GenSpawn.Spawn(bossPawn, specimenPawn.Position, specimenPawn.Map);
                 }
             }
