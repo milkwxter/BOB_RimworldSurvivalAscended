@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <SoundDef>
+        <defName>m_Carno_Wounded</defName>
+        <context>MapOnly</context>
+        <eventNames/>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Pawns/Carnotaurus/m_carno_wounded</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>35</min>
+                    <max>40</max>
+                </volumeRange>
+                <pitchRange>
+                    <min>1.0</min>
+                    <max>1.1</max>
+                </pitchRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+	
+	<SoundDef>
+        <defName>m_Carno_Angry</defName>
+        <context>MapOnly</context>
+        <eventNames/>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Pawns/Carnotaurus/m_carno_angry</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>35</min>
+                    <max>40</max>
+                </volumeRange>
+                <pitchRange>
+                    <min>1.0</min>
+                    <max>1.1</max>
+                </pitchRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+	
+	<SoundDef>
+        <defName>m_Carno_Death</defName>
+        <context>MapOnly</context>
+        <eventNames/>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Pawns/Carnotaurus/m_carno_death</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>35</min>
+                    <max>40</max>
+                </volumeRange>
+                <pitchRange>
+                    <min>1.0</min>
+                    <max>1.1</max>
+                </pitchRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+	
+	<SoundDef>
+        <defName>m_Carno_Call</defName>
+        <context>MapOnly</context>
+        <eventNames/>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Pawns/Carnotaurus/m_carno_call</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>35</min>
+                    <max>40</max>
+                </volumeRange>
+                <pitchRange>
+                    <min>1.0</min>
+                    <max>1.1</max>
+                </pitchRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+	
+</Defs>

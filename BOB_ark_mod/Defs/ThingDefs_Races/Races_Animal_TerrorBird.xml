@@ -8,11 +8,11 @@
     <devNote>terror bird</devNote>
     <description>A large, flightless carnivore with a powerful and sharp beak. Its aggressive pack tactics make it especially deadly to isolated prey.</description>
     <statBases>
-      <MoveSpeed>3.7</MoveSpeed>
+      <MoveSpeed>4.3</MoveSpeed>
       <MarketValue>450</MarketValue>
       <ComfyTemperatureMin>-10</ComfyTemperatureMin>
       <FilthRate>4</FilthRate>
-      <Wildness>0</Wildness>
+      <Wildness>0.75</Wildness>
     </statBases>
     <comps>
       <li Class="CompProperties_EggLayer">
@@ -24,16 +24,19 @@
       </li>
     </comps>
     <race>
+	  <herdAnimal>true</herdAnimal>
       <body>Bird</body>
       <leatherDef>Leather_Bird</leatherDef>
       <baseHungerRate>0.14</baseHungerRate>
-      <baseBodySize>1.75</baseBodySize>
-      <baseHealthScale>1.0</baseHealthScale>
+      <baseBodySize>1.00</baseBodySize>
+      <baseHealthScale>1.4</baseHealthScale>
       <foodType>VegetarianRoughAnimal</foodType>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <roamMtbDays>7</roamMtbDays>
       <mateMtbHours>8</mateMtbHours>
       <lifeExpectancy>9</lifeExpectancy>
+      <manhunterOnTameFailChance>0.50</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1.00</manhunterOnDamageChance>
       <lifeStageAges>
         <li>
           <def>AnimalBabyTiny</def>
@@ -103,13 +106,19 @@
     <label>terror bird</label>
     <race>BOB_TerrorBird</race>
     <combatPower>130</combatPower>
+	<wildGroupSize>4~6</wildGroupSize>
+	<alternateGraphicChance>1</alternateGraphicChance>
+	<alternateGraphics>
+		<li><color>(94,66,61)</color></li> <!-- Warm Bark Brown -->
+		<li><color>(60,60,60)</color></li> <!-- Slate Black -->
+		<li><color>(70,68,100)</color></li> <!-- Deep Violet Blue -->
+	</alternateGraphics>
     <lifeStages>
       <li>
         <label>terror bird chick</label>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/TerrorBird/TerrorBird</texPath>
           <drawSize>1.05</drawSize>
-          <color>(123,104,89)</color>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/TerrorBird/Dessicated_TerrorBird_east</texPath>
@@ -119,27 +128,25 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/TerrorBird/TerrorBird</texPath>
-          <drawSize>1.45</drawSize>
-          <color>(123,104,89)</color>
+          <drawSize>1.65</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/TerrorBird/Dessicated_TerrorBird_east</texPath>
-          <drawSize>1.45</drawSize>
+          <drawSize>1.65</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/TerrorBird/TerrorBird</texPath>
-          <drawSize>1.65</drawSize>
-          <color>(123,104,89)</color>
+          <drawSize>1.95</drawSize>
           <shadowData>
-            <volume>(0.75, 0.75, 0.75)</volume>
-            <offset>(0,0,-0.05)</offset>
+            <volume>(0.5, 0.5, 0.5)</volume>
+            <offset>(0,0,0)</offset>
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/TerrorBird/Dessicated_TerrorBird_east</texPath>
-          <drawSize>1.65</drawSize>
+          <drawSize>1.95</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>

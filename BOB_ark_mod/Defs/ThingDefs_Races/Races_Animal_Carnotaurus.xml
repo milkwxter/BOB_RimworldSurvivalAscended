@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>BOB_Carnotaurus</defName>
+    <label>carnotaurus</label>
+    <devNote>carnotaurus</devNote>
+    <description>A horned predator built for speed and brute force, it strikes fast and hits hard. Its thick hide and lunging attacks make escape unlikely for any target it chooses.</description>
+    <statBases>
+      <MoveSpeed>5.7</MoveSpeed>
+      <MarketValue>750</MarketValue>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <FilthRate>6</FilthRate>
+      <Wildness>0.85</Wildness>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>EggChickenUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>EggChickenFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>1</eggLayIntervalDays>
+        <eggCountRange>1</eggCountRange>
+      </li>
+    </comps>
+    <race>
+	  <herdAnimal>false</herdAnimal>
+      <predator>true</predator>
+      <body>Bird</body>
+      <leatherDef>Leather_Lizard</leatherDef>
+      <baseHungerRate>0.2</baseHungerRate>
+      <baseBodySize>1.5</baseBodySize>
+      <baseHealthScale>2</baseHealthScale>
+      <foodType>CarnivoreAnimalStrict</foodType>
+      <trainability>Intermediate</trainability>
+      <roamMtbDays>7</roamMtbDays>
+      <mateMtbHours>8</mateMtbHours>
+      <lifeExpectancy>15</lifeExpectancy>
+      <manhunterOnTameFailChance>0.60</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1.00</manhunterOnDamageChance>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.6</minAge>
+          <soundWounded>m_Carno_Wounded</soundWounded>
+          <soundDeath>m_Carno_Death</soundDeath>
+          <soundCall>m_Carno_Call</soundCall>
+          <soundAngry>m_Carno_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalUncommon</li>
+    </tradeTags>
+    <tools>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>119</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>BOB_Carnotaurus</defName>
+    <label>carnotaurus</label>
+    <race>BOB_Carnotaurus</race>
+    <combatPower>200</combatPower>
+	<wildGroupSize>1~2</wildGroupSize>
+	<alternateGraphicChance>1</alternateGraphicChance>
+	<alternateGraphics>
+		<li><color>(120,112,100)</color></li> <!-- Dusty Stone Grey -->
+		<li><color>(110,130,100)</color></li> <!-- Moss Green -->
+		<li><color>(140,115,90)</color></li>  <!-- Earthen Brown -->
+	</alternateGraphics>
+    <lifeStages>
+      <li>
+        <label>carnotaurus baby</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Carnotaurus/Carnotaurus</texPath>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Carnotaurus/Dessicated_Carnotaurus_east</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Carnotaurus/Carnotaurus</texPath>
+          <drawSize>3.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Carnotaurus/Dessicated_Carnotaurus_east</texPath>
+          <drawSize>3.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Carnotaurus/Carnotaurus</texPath>
+          <drawSize>5</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.5, 0.5)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Carnotaurus/Dessicated_Carnotaurus_east</texPath>
+          <drawSize>5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>
