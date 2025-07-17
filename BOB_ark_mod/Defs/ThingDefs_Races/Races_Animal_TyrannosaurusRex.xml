@@ -2,16 +2,16 @@
 <Defs>
 
   <ThingDef ParentName="AnimalThingBase">
-    <defName>BOB_Carnotaurus</defName>
-    <label>carnotaurus</label>
-    <devNote>carnotaurus</devNote>
-    <description>A horned predator built for speed and brute force, it strikes fast and hits hard. Its thick hide and lunging attacks make escape unlikely for any target it chooses.</description>
+    <defName>BOB_TyrannosaurusRex</defName>
+    <label>tyrannosaurus rex</label>
+    <devNote>tyrannosaurus rex</devNote>
+    <description>A massive, ancient killer bred for dominance. Its bite crushes bone and its charge ruptures lines, leaving only devastation in its wake.</description>
     <statBases>
-      <MoveSpeed>5.7</MoveSpeed>
-      <MarketValue>750</MarketValue>
+      <MoveSpeed>5.1</MoveSpeed>
+      <MarketValue>2500</MarketValue>
       <ComfyTemperatureMin>-10</ComfyTemperatureMin>
-      <FilthRate>6</FilthRate>
-      <Wildness>0.85</Wildness>
+      <FilthRate>10</FilthRate>
+      <Wildness>1.0</Wildness>
     </statBases>
     <comps>
       <li Class="CompProperties_EggLayer">
@@ -28,8 +28,8 @@
       <body>Bird</body>
       <leatherDef>Leather_Lizard</leatherDef>
       <baseHungerRate>0.2</baseHungerRate>
-      <baseBodySize>1.5</baseBodySize>
-      <baseHealthScale>2</baseHealthScale>
+      <baseBodySize>2.0</baseBodySize>
+      <baseHealthScale>3</baseHealthScale>
       <foodType>CarnivoreAnimalStrict</foodType>
       <trainability>Intermediate</trainability>
       <roamMtbDays>7</roamMtbDays>
@@ -68,7 +68,7 @@
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>19</power>
+        <power>25</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
@@ -77,7 +77,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>8</power>
+        <power>14</power>
         <cooldownTime>1.5</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -87,51 +87,54 @@
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
-    <defName>BOB_Carnotaurus</defName>
-    <label>carnotaurus</label>
-    <race>BOB_Carnotaurus</race>
-    <combatPower>200</combatPower>
+    <defName>BOB_TyrannosaurusRex</defName>
+    <label>tyrannosaurus rex</label>
+    <race>BOB_TyrannosaurusRex</race>
+    <combatPower>500</combatPower>
 	<wildGroupSize>1~2</wildGroupSize>
 	<alternateGraphicChance>1</alternateGraphicChance>
 	<alternateGraphics>
-		<li><color>(120,112,100)</color></li> <!-- Dusty Stone Grey -->
-		<li><color>(110,130,100)</color></li> <!-- Moss Green -->
-		<li><color>(140,115,90)</color></li>  <!-- Earthen Brown -->
+		<li><color>(90,50,40)</color></li>    <!-- Blooded Crimson -->
+		<li><color>(70,70,70)</color></li>    <!-- Charcoal Hide -->
+		<li><color>(105,95,75)</color></li>   <!-- Fossil Bone -->
+		<li><color>(160,150,130)</color></li> <!-- Weathered Sand -->
+		<li><color>(60,80,50)</color></li>    <!-- Jungle Slate -->
+		<li><color>(200,175,120)</color></li> <!-- Regal Amber -->
 	</alternateGraphics>
     <lifeStages>
       <li>
-        <label>carnotaurus baby</label>
+        <label>tyrannosaurus rex baby</label>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Carnotaurus/Carnotaurus</texPath>
-          <drawSize>3</drawSize>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Carnotaurus/Dessicated_Carnotaurus_east</texPath>
-          <drawSize>3</drawSize>
-        </dessicatedBodyGraphicData>
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Carnotaurus/Carnotaurus</texPath>
+          <texPath>Things/Pawn/Animal/TyrannosaurusRex/Rex</texPath>
           <drawSize>3.5</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Carnotaurus/Dessicated_Carnotaurus_east</texPath>
+          <texPath>Things/Pawn/Animal/TyrannosaurusRex/Dessicated_Rex_east</texPath>
           <drawSize>3.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Carnotaurus/Carnotaurus</texPath>
+          <texPath>Things/Pawn/Animal/TyrannosaurusRex/Rex</texPath>
           <drawSize>5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/TyrannosaurusRex/Dessicated_Rex_east</texPath>
+          <drawSize>5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/TyrannosaurusRex/Rex</texPath>
+          <drawSize>6.5</drawSize>
           <shadowData>
-            <volume>(0.5, 0.5, 0.5)</volume>
+            <volume>(0.75, 0.75, 0.75)</volume>
             <offset>(0,0,0)</offset>
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Carnotaurus/Dessicated_Carnotaurus_east</texPath>
-          <drawSize>5</drawSize>
+          <texPath>Things/Pawn/Animal/TyrannosaurusRex/Dessicated_Rex_east</texPath>
+          <drawSize>6.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>

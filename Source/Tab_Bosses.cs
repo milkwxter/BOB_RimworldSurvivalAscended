@@ -11,7 +11,8 @@ namespace BOB_ArkMod
         public static List<BossEntry> bossList = new List<BossEntry>
         {
             new BossEntry("BOB_TerrorBird", "Unlock narcoberries"),
-            new BossEntry("BOB_Carnotaurus", "Gain new mutation"),
+            new BossEntry("BOB_Carnotaurus", "Unlock tools"),
+            new BossEntry("BOB_TyrannosaurusRex", "Unlock mutations"),
             new BossEntry("Thrumbo", "Gain new mutation")
         };
 
