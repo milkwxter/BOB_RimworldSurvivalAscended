@@ -71,7 +71,7 @@ namespace BOB_ArkMod
                     Vector2 direction = (end - start).normalized;
                     float distance = Vector2.Distance(start, end);
                     float stepSize = 64f;
-                    float textureHeight = 32f;
+                    float textureHeight = 64f;
                     int steps = Mathf.FloorToInt(distance / stepSize);
 
                     for (int i = 0; i <= steps; i++)

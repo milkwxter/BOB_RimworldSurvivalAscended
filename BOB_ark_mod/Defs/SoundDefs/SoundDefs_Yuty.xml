@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<SoundDef>
+        <defName>m_Yuty_CourageRoar</defName>
+        <context>MapOnly</context>
+        <eventNames/>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Pawns/Yutyrannus/m_yuty_courage_roar</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>50</min>
+                    <max>55</max>
+                </volumeRange>
+                <pitchRange>
+                    <min>1.0</min>
+                    <max>1.1</max>
+                </pitchRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+	
+</Defs>

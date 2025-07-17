@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<TrainableDef>
+		<defName>BOB_CourageRoar_Yuty</defName>
+		<label>terror roar</label>
+		<description>Command the creature to release a powerful roar. This has a chance to buff friendly humans and animals for battle.</description>
+		<listPriority>0</listPriority>
+		<difficulty>200</difficulty>
+		<steps>2</steps>
+		<specialTrainable>true</specialTrainable>
+		<enablesAbility>BOB_CourageRoar_Yuty</enablesAbility>
+	</TrainableDef>
+
+	<AbilityDef>
+		<defName>BOB_CourageRoar_Yuty</defName>
+		<label>courage roar</label>
+		<description>Release a courage inspiring roar which has a chance to buff friendly humans and animals for battle.</description>
+		<iconPath>UI/Abilities/m_terror_roar_rex</iconPath>
+		<cooldownTicksRange>60000</cooldownTicksRange> <!-- 1 days -->
+		<stunTargetWhileCasting>true</stunTargetWhileCasting>
+		<targetRequired>false</targetRequired>
+		<aiCanUse>true</aiCanUse>
+		<ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+		<displayOrder>300</displayOrder>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<statBases>
+		  <Ability_EffectRadius>23.9</Ability_EffectRadius>
+		</statBases>
+		<verbProperties>
+		  <verbClass>Verb_CastAbility</verbClass>
+		  <range>23.9</range>
+		  <warmupTime>0.5</warmupTime>
+		  <requireLineOfSight>false</requireLineOfSight>
+		  <soundCast>m_Yuty_CourageRoar</soundCast>
+		  <targetParams>
+			<canTargetSelf>true</canTargetSelf>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetAnimals>true</canTargetAnimals>
+			<canTargetHumans>true</canTargetHumans>
+			<canTargetMechs>false</canTargetMechs>
+			<canTargetEntities>False</canTargetEntities>
+			<canTargetSubhumans>False</canTargetSubhumans>
+			<canTargetBuildings>false</canTargetBuildings>
+		  </targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>BOB_Courage</hediffDef>
+				<ignoreSelf>true</ignoreSelf>
+				<durationSecondsOverride>120~180</durationSecondsOverride> <!-- incredibly necessary -->
+			</li>
+			<li Class="CompProperties_AbilityEffect">
+				<compClass>BOB_ArkMod.CompAbilityEffect_OnlyTargetFriendlies</compClass>
+			</li>
+			<li Class="CompProperties_AbilityAnimalRoar">
+				<chanceFromHearingCurve>
+				  <points>
+					<li>(0.0, 0.0)</li>
+					<li>(1.0, 0.75)</li>
+				  </points>
+				</chanceFromHearingCurve>
+			</li>
+			<li Class="CompProperties_AbilityEffecterOnCaster">
+				<effecterDef>TerrorRoar</effecterDef>
+				<maintainTicks>120</maintainTicks>
+			</li>
+		</comps>
+	</AbilityDef>
+</Defs>

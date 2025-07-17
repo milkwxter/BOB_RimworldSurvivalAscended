@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef>
+		<defName>BOB_Courage</defName>
+		<label>courage</label>
+		<description>This pawn feels energized with courage.</description>
+		<defaultLabelColor>(0.2, 0.4, 0.2)</defaultLabelColor>
+		<isBad>false</isBad>
+		<tendable>false</tendable>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+		  <li Class="HediffCompProperties_Disappears">
+			<showRemainingTime>True</showRemainingTime>
+		  </li>
+		</comps>
+		<stages>
+			<li>
+				<statOffsets>
+				  <MeleeDamageFactor>1.25</MeleeDamageFactor>
+				  <IncomingDamageFactor>-0.20</IncomingDamageFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+  
+</Defs>

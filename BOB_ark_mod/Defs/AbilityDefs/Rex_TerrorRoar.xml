@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<TrainableDef>
+		<defName>BOB_TerrorRoar_Rex</defName>
+		<label>terror roar</label>
+		<description>Command the creature to release a deafening roar. This has a chance to send nearby hostile humans and animals fleeing in terror.</description>
+		<listPriority>0</listPriority>
+		<difficulty>200</difficulty>
+		<steps>2</steps>
+		<specialTrainable>true</specialTrainable>
+		<enablesAbility>BOB_TerrorRoar_Rex</enablesAbility>
+	</TrainableDef>
+  
+	<AbilityDef>
+		<defName>BOB_TerrorRoar_Rex</defName>
+		<label>terror roar</label>
+		<description>Release a terrifying roar which has a chance to send nearby hostile humans and animals fleeing in terror.</description>
+		<iconPath>UI/Abilities/m_terror_roar_rex</iconPath>
+		<cooldownTicksRange>180000</cooldownTicksRange> <!-- 3 days -->
+		<stunTargetWhileCasting>true</stunTargetWhileCasting>
+		<targetRequired>false</targetRequired>
+		<aiCanUse>true</aiCanUse>
+		<ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+		<displayOrder>300</displayOrder>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<statBases>
+		  <Ability_EffectRadius>23.9</Ability_EffectRadius>
+		</statBases>
+		<verbProperties>
+		  <verbClass>Verb_CastAbility</verbClass>
+		  <range>23.9</range>
+		  <warmupTime>0.5</warmupTime>
+		  <requireLineOfSight>false</requireLineOfSight>
+		  <soundCast>m_Rex_TerrorRoar</soundCast>
+		  <targetParams>
+			<canTargetSelf>true</canTargetSelf>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetAnimals>true</canTargetAnimals>
+			<canTargetHumans>true</canTargetHumans>
+			<canTargetMechs>false</canTargetMechs>
+			<canTargetEntities>False</canTargetEntities>
+			<canTargetSubhumans>False</canTargetSubhumans>
+			<canTargetBuildings>false</canTargetBuildings>
+		  </targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveMentalState">
+				<compClass>CompAbilityEffect_GiveMentalState</compClass>
+				<stateDef>Terror</stateDef>
+			</li>
+				<li Class="CompProperties_AbilityEffect">
+				<compClass>CompAbilityEffect_OnlyTargetHostiles</compClass>
+			</li>
+				<li Class="CompProperties_AbilityAnimalRoar">
+					<chanceFromHearingCurve>
+					  <points>
+						<li>(0.0, 0.0)</li>
+						<li>(1.0, 0.75)</li>
+					  </points>
+					</chanceFromHearingCurve>
+				</li>
+			<li Class="CompProperties_AbilityEffecterOnCaster">
+				<effecterDef>TerrorRoar</effecterDef>
+				<maintainTicks>120</maintainTicks>
+			</li>
+		</comps>
+	</AbilityDef>
+</Defs>

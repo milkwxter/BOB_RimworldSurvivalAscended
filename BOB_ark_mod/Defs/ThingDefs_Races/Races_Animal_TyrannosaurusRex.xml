@@ -5,9 +5,9 @@
     <defName>BOB_TyrannosaurusRex</defName>
     <label>tyrannosaurus rex</label>
     <devNote>tyrannosaurus rex</devNote>
-    <description>A massive, ancient killer bred for dominance. Its bite crushes bone and its charge ruptures lines, leaving only devastation in its wake.</description>
+    <description>A massive, ancient killer bred for dominance. Its bite crushes bone and its charge ruptures lines, leaving only devastation in its wake.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; When angered, it will release a terror roar just like the alpha thrumbo, which scares away nearby hostile humans and animals. If you tame one, you can use this power as well.</description>
     <statBases>
-      <MoveSpeed>5.1</MoveSpeed>
+      <MoveSpeed>6.1</MoveSpeed>
       <MarketValue>2500</MarketValue>
       <ComfyTemperatureMin>-10</ComfyTemperatureMin>
       <FilthRate>10</FilthRate>
@@ -34,9 +34,12 @@
       <trainability>Intermediate</trainability>
       <roamMtbDays>7</roamMtbDays>
       <mateMtbHours>8</mateMtbHours>
-      <lifeExpectancy>15</lifeExpectancy>
-      <manhunterOnTameFailChance>0.60</manhunterOnTameFailChance>
+      <lifeExpectancy>20</lifeExpectancy>
+      <manhunterOnTameFailChance>1.00</manhunterOnTameFailChance>
       <manhunterOnDamageChance>1.00</manhunterOnDamageChance>
+      <specialTrainables>
+        <li>BOB_TerrorRoar_Rex</li>
+      </specialTrainables>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>
@@ -49,10 +52,10 @@
         <li>
           <def>AnimalAdult</def>
           <minAge>0.6</minAge>
-          <soundWounded>m_Carno_Wounded</soundWounded>
-          <soundDeath>m_Carno_Death</soundDeath>
-          <soundCall>m_Carno_Call</soundCall>
-          <soundAngry>m_Carno_Angry</soundAngry>
+          <soundWounded>m_Rex_Wounded</soundWounded>
+          <soundDeath>m_Rex_Death</soundDeath>
+          <soundCall>m_Rex_Call</soundCall>
+          <soundAngry>m_Rex_Angry</soundAngry>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -90,7 +93,7 @@
     <defName>BOB_TyrannosaurusRex</defName>
     <label>tyrannosaurus rex</label>
     <race>BOB_TyrannosaurusRex</race>
-    <combatPower>500</combatPower>
+    <combatPower>800</combatPower>
 	<wildGroupSize>1~2</wildGroupSize>
 	<alternateGraphicChance>1</alternateGraphicChance>
 	<alternateGraphics>
@@ -101,6 +104,9 @@
 		<li><color>(60,80,50)</color></li>    <!-- Jungle Slate -->
 		<li><color>(200,175,120)</color></li> <!-- Regal Amber -->
 	</alternateGraphics>
+    <abilities>
+      <li>BOB_TerrorRoar_Rex</li>
+    </abilities>
     <lifeStages>
       <li>
         <label>tyrannosaurus rex baby</label>
