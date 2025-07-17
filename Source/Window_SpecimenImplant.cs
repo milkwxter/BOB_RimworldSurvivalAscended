@@ -1,6 +1,4 @@
-﻿using BOB_ArkMod.BOB_ArkMod;
-using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
@@ -73,18 +71,17 @@ namespace BOB_ArkMod
             SpecimenBossTabDrawer.DrawBossTab(rect, compSpecimen);
         }
 
-
         private void DrawMutationTab(Rect rect)
         {
-            Widgets.Label(rect, "Mutations UI");
-            // Add tier unlocks, visuals, ability hooks
+            // build the connections here
+            SpecimenMutationTabDrawer.BuildMutationConnections();
+            // draw the tab
+            SpecimenMutationTabDrawer.DrawMutationTab(rect, compSpecimen);
         }
 
         private void DrawEngramTab(Rect rect)
         {
             Widgets.Label(rect, "Engrams UI");
-            // Trigger supply drops, manage research unlocks
         }
     }
-
 }

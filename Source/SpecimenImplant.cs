@@ -15,6 +15,7 @@ namespace BOB_ArkMod
     public class HediffComp_SpecimenImplant : HediffComp
     {
         private HashSet<string> defeatedBosses = new HashSet<string>();
+        private HashSet<string> unlockedMutations = new HashSet<string>();
 
         public override IEnumerable<Gizmo> CompGetGizmos()
         {
@@ -49,10 +50,21 @@ namespace BOB_ArkMod
             defeatedBosses.Add(bossDefName);
         }
 
+        public bool HasThisMutation(string mutationString)
+        {
+            return unlockedMutations.Contains(mutationString);
+        }
+
+        public void AddMutation(string mutationString)
+        {
+            unlockedMutations.Add(mutationString);
+        }
+
         public override void CompExposeData()
         {
             base.CompExposeData();
             Scribe_Collections.Look(ref defeatedBosses, "defeatedBosses", LookMode.Value);
+            Scribe_Collections.Look(ref unlockedMutations, "unlockedMutations", LookMode.Value);
         }
     }
 }
