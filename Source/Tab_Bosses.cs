@@ -3,6 +3,7 @@ using System.Linq;
 using RimWorld;
 using Verse;
 using UnityEngine;
+using System.Security.Cryptography;
 
 namespace BOB_ArkMod
 {
@@ -10,9 +11,8 @@ namespace BOB_ArkMod
     {
         public static List<BossEntry> bossList = new List<BossEntry>
         {
-            new BossEntry("BOB_TerrorBird", "Unlock narcoberries"),
-            new BossEntry("BOB_Carnotaurus", "Unlock tools"),
-            new BossEntry("BOB_TyrannosaurusRex", "Unlock mutations"),
+            new BossEntry("BOB_Yutyrannus", "Unlock mutations"),
+            new BossEntry("BOB_YutyrannusAlpha", "Unlock alpha mode"),
             new BossEntry("Thrumbo", "Gain new mutation")
         };
 
@@ -41,9 +41,21 @@ namespace BOB_ArkMod
             // do the icon box
             Rect iconRect = new Rect(rect.x + 10f, centerY, 64f, 64f);
             GUI.DrawTexture(iconRect, ContentFinder<Texture2D>.Get("UI/Widgets/DesButBG"));
-            Texture2D icon = ThingDef.Named(boss.defName).uiIcon;
+            ThingDef def = ThingDef.Named(boss.defName);
+            Texture2D icon = def.uiIcon;
             if (icon != null)
+            {
+                Color iconColor = Color.white;
+
+                if (def.comps != null && def.comps.Any(c => c.compClass == typeof(BOB_ArkMod.Comp_ArkAlphaMarker)))
+                {
+                    iconColor = new Color(0.8f, 0.2f, 0.2f); // Alpha Red
+                }
+
+                GUI.color = iconColor;
                 Widgets.DrawTextureFitted(iconRect, icon, 1f);
+                GUI.color = Color.white;
+            }
 
             // do the boss name
             Rect nameRect = new Rect(rect.x + 84f, rect.y + 10f, 200f, 30f);

@@ -3,8 +3,8 @@
 <Defs>
 	<TrainableDef>
 		<defName>BOB_CourageRoar_Yuty</defName>
-		<label>terror roar</label>
-		<description>Command the creature to release a powerful roar. This has a chance to buff friendly humans and animals for battle.</description>
+		<label>courage roar</label>
+		<description>Command the creature to release an inspiring roar. This has a chance to buff friendly humans and animals for battle.</description>
 		<listPriority>0</listPriority>
 		<difficulty>200</difficulty>
 		<steps>2</steps>

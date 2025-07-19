@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>BOB_YutyrannusAlpha</defName>
+    <label>alpha yutyrannus</label>
+    <devNote>alpha yutyrannus</devNote>
+    <description>A shaggy tyrant molded by cold and conflict. Its courage roar surges through allies, hardening their resolve and sharpening their strikes.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; A powerful alpha creature. Can you defeat it?</description>
+    <statBases>
+      <MoveSpeed>7.5</MoveSpeed>
+      <MarketValue>10000</MarketValue>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <FilthRate>10</FilthRate>
+      <Wildness>1.0</Wildness>
+      <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.30</ArmorRating_Heat>
+    </statBases>
+    <race>
+	  <herdAnimal>false</herdAnimal>
+      <predator>true</predator>
+      <body>BOB_Theropod</body>
+      <leatherDef>Leather_Lizard</leatherDef>
+      <baseHungerRate>2.0</baseHungerRate>
+      <baseBodySize>2.5</baseBodySize>
+      <baseHealthScale>10</baseHealthScale>
+      <foodType>CarnivoreAnimalStrict</foodType>
+      <trainability>Intermediate</trainability>
+      <roamMtbDays>7</roamMtbDays>
+      <mateMtbHours>8</mateMtbHours>
+      <lifeExpectancy>20</lifeExpectancy>
+      <manhunterOnTameFailChance>1.00</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1.00</manhunterOnDamageChance>
+      <specialTrainables>
+        <li>BOB_CourageRoar_Yuty</li>
+      </specialTrainables>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>1.0</minAge>
+          <soundWounded>m_Yuty_Wounded</soundWounded>
+          <soundDeath>m_Yuty_Death</soundDeath>
+          <soundCall>m_Yuty_Call</soundCall>
+          <soundAngry>m_Yuty_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tools>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>21</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>13</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+	<comps>
+	  <li Class="BOB_ArkMod.CompProperties_ArkAlphaMarker" />
+	</comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>BOB_YutyrannusAlpha</defName>
+    <label>alpha yutyrannus</label>
+    <race>BOB_YutyrannusAlpha</race>
+    <combatPower>2500</combatPower>
+	<wildGroupSize>1~1</wildGroupSize>
+	<alternateGraphicChance>1</alternateGraphicChance>
+	<alternateGraphics>
+		<li><color>(90,40,40)</color></li>  <!-- ALPHA RED -->
+	</alternateGraphics>
+    <abilities>
+      <li>BOB_CourageRoar_Yuty</li>
+    </abilities>
+    <lifeStages>
+      <li>
+        <label>alpha yutyrannus baby</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Yutyrannus/Yuty</texPath>
+          <drawSize>4.0</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Yutyrannus/Dessicated_Yuty_east</texPath>
+          <drawSize>4.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Yutyrannus/Yuty</texPath>
+          <drawSize>5.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Yutyrannus/Dessicated_Yuty_east</texPath>
+          <drawSize>5.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Yutyrannus/Yuty</texPath>
+          <drawSize>7.0</drawSize>
+          <shadowData>
+            <volume>(0.75, 0.75, 0.75)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+		  <drawOffsetEast>(-1, 0, 0)</drawOffsetEast>
+		  <drawOffsetWest>(1, 0, 0)</drawOffsetWest>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Yutyrannus/Dessicated_Yuty_east</texPath>
+          <drawSize>7.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

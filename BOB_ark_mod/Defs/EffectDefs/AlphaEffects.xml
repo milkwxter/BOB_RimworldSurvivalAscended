@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>BOB_Mote_AlphaSmoke</defName>
+    <graphicData>
+      <texPath>Things/Effects/m_alpha_smoke</texPath>
+	  <drawSize>2.5</drawSize>
+    </graphicData>
+    <thingClass>MoteThrown</thingClass>
+    <altitudeLayer>Shadows</altitudeLayer>
+    <mote>
+      <fadeInTime>0.10</fadeInTime>
+      <solidTime>0.60</solidTime>
+      <fadeOutTime>0.60</fadeOutTime>
+      <attachedDrawOffset>(0.2, 0, 0.2)</attachedDrawOffset>
+    </mote>
+  </ThingDef>
+  
+  <ThingDef ParentName="MoteBase">
+    <defName>BOB_Mote_AlphaBit</defName>
+    <graphicData>
+      <texPath>Things/Effects/m_alpha_bit</texPath>
+    </graphicData>
+    <thingClass>MoteThrownAttached</thingClass>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <mote>
+      <fadeInTime>0.50</fadeInTime>
+      <solidTime>1.5</solidTime>
+      <fadeOutTime>2</fadeOutTime>
+      <attachedDrawOffset>(0.2, 0, 0.2)</attachedDrawOffset>
+    </mote>
+  </ThingDef>
+  
+  <EffecterDef>
+    <defName>BOB_Alpha</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_DrifterEmoteChance</subEffecterClass>
+        <scale>0.5~0.7</scale>
+        <chancePerTick>0.02</chancePerTick>
+        <positionRadius>0.3</positionRadius>
+        <moteDef>BOB_Mote_AlphaBit</moteDef>
+        <speed>0.18~0.18</speed>
+        <angle>10~80</angle>
+      </li>
+    </children>
+  </EffecterDef>
+  
+</Defs>

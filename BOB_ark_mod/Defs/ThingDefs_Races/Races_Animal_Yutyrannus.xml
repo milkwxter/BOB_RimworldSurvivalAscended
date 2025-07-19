@@ -2,10 +2,10 @@
 <Defs>
 
   <ThingDef ParentName="AnimalThingBase">
-    <defName>BOB_TyrannosaurusRex</defName>
-    <label>tyrannosaurus rex</label>
-    <devNote>tyrannosaurus rex</devNote>
-    <description>A massive, ancient killer bred for dominance. Its bite crushes bone and its charge ruptures lines, leaving only devastation in its wake.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; When angered, it will release a terror roar just like the alpha thrumbo, which scares away nearby hostile humans and animals. If you tame one, you can use this power as well.</description>
+    <defName>BOB_Yutyrannus</defName>
+    <label>yutyrannus</label>
+    <devNote>yutyrannus</devNote>
+    <description>A shaggy tyrant molded by cold and conflict. Its courage roar surges through allies, hardening their resolve and sharpening their strikes.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; When tamed, it can learn a courage roar ability, which increases the melee strength and defenses of friendly pawns that hear it.</description>
     <statBases>
       <MoveSpeed>6.1</MoveSpeed>
       <MarketValue>2500</MarketValue>
@@ -25,10 +25,10 @@
     <race>
 	  <herdAnimal>false</herdAnimal>
       <predator>true</predator>
-      <body>Bird</body>
+      <body>BOB_Theropod</body>
       <leatherDef>Leather_Lizard</leatherDef>
-      <baseHungerRate>0.2</baseHungerRate>
-      <baseBodySize>2.0</baseBodySize>
+      <baseHungerRate>1.0</baseHungerRate>
+      <baseBodySize>1.9</baseBodySize>
       <baseHealthScale>3</baseHealthScale>
       <foodType>CarnivoreAnimalStrict</foodType>
       <trainability>Intermediate</trainability>
@@ -38,7 +38,7 @@
       <manhunterOnTameFailChance>1.00</manhunterOnTameFailChance>
       <manhunterOnDamageChance>1.00</manhunterOnDamageChance>
       <specialTrainables>
-        <li>BOB_TerrorRoar_Rex</li>
+        <li>BOB_CourageRoar_Yuty</li>
       </specialTrainables>
       <lifeStageAges>
         <li>
@@ -51,11 +51,11 @@
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>0.6</minAge>
-          <soundWounded>m_Rex_Wounded</soundWounded>
-          <soundDeath>m_Rex_Death</soundDeath>
-          <soundCall>m_Rex_Call</soundCall>
-          <soundAngry>m_Rex_Angry</soundAngry>
+          <minAge>1.0</minAge>
+          <soundWounded>m_Yuty_Wounded</soundWounded>
+          <soundDeath>m_Yuty_Death</soundDeath>
+          <soundCall>m_Yuty_Call</soundCall>
+          <soundAngry>m_Yuty_Angry</soundAngry>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -71,7 +71,7 @@
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>25</power>
+        <power>21</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
@@ -80,7 +80,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>14</power>
+        <power>13</power>
         <cooldownTime>1.5</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -90,60 +90,87 @@
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
-    <defName>BOB_TyrannosaurusRex</defName>
-    <label>tyrannosaurus rex</label>
-    <race>BOB_TyrannosaurusRex</race>
-    <combatPower>800</combatPower>
+    <defName>BOB_Yutyrannus</defName>
+    <label>yutyrannus</label>
+    <race>BOB_Yutyrannus</race>
+    <combatPower>700</combatPower>
 	<wildGroupSize>1~2</wildGroupSize>
-	<alternateGraphicChance>1</alternateGraphicChance>
-	<alternateGraphics>
-		<li><color>(90,50,40)</color></li>    <!-- Blooded Crimson -->
-		<li><color>(70,70,70)</color></li>    <!-- Charcoal Hide -->
-		<li><color>(105,95,75)</color></li>   <!-- Fossil Bone -->
-		<li><color>(160,150,130)</color></li> <!-- Weathered Sand -->
-		<li><color>(60,80,50)</color></li>    <!-- Jungle Slate -->
-		<li><color>(200,175,120)</color></li> <!-- Regal Amber -->
-	</alternateGraphics>
     <abilities>
-      <li>BOB_TerrorRoar_Rex</li>
+      <li>BOB_CourageRoar_Yuty</li>
     </abilities>
     <lifeStages>
       <li>
-        <label>tyrannosaurus rex baby</label>
+        <label>yutyrannus baby</label>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/TyrannosaurusRex/Rex</texPath>
+          <texPath>Things/Pawn/Animal/Yutyrannus/Yuty</texPath>
           <drawSize>3.5</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/TyrannosaurusRex/Dessicated_Rex_east</texPath>
+          <texPath>Things/Pawn/Animal/Yutyrannus/Dessicated_Yuty_east</texPath>
           <drawSize>3.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/TyrannosaurusRex/Rex</texPath>
+          <texPath>Things/Pawn/Animal/Yutyrannus/Yuty</texPath>
           <drawSize>5</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/TyrannosaurusRex/Dessicated_Rex_east</texPath>
+          <texPath>Things/Pawn/Animal/Yutyrannus/Dessicated_Yuty_east</texPath>
           <drawSize>5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/TyrannosaurusRex/Rex</texPath>
+          <texPath>Things/Pawn/Animal/Yutyrannus/Yuty</texPath>
           <drawSize>6.5</drawSize>
           <shadowData>
             <volume>(0.75, 0.75, 0.75)</volume>
             <offset>(0,0,0)</offset>
           </shadowData>
+		  <drawOffsetEast>(-1, 0, 0)</drawOffsetEast>
+		  <drawOffsetWest>(1, 0, 0)</drawOffsetWest>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/TyrannosaurusRex/Dessicated_Rex_east</texPath>
+          <texPath>Things/Pawn/Animal/Yutyrannus/Dessicated_Yuty_east</texPath>
           <drawSize>6.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
   </PawnKindDef>
+  
+  <ThingDef ParentName="EggFertBase">
+    <defName>BOB_EggYutyFert</defName>
+    <label>yutyrannus egg (fert.)</label>
+    <description>Fertilized yutyrannus egg. If all goes well, it should hatch into a baby yutyrannus.</description>
+    <graphicData>
+      <texPath>Things/Items/Eggs/m_egg_yuty</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.6</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>140.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>15</hatcherDaystoHatch>
+        <hatcherPawn>BOB_Yutyrannus</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>BOB_EggYutyUnfert</defName>
+    <label>yutyrannus egg (unfert.)</label>
+    <description>Unfertilized yutyrannus egg. It can be eaten raw, but it's much, much better cooked.</description>
+    <graphicData>
+      <texPath>Things/Items/Eggs/m_egg_yuty</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.6</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>50.0</MarketValue>
+    </statBases>
+  </ThingDef>
 
 </Defs>

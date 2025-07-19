@@ -6,8 +6,10 @@ using Verse.Noise;
 
 namespace BOB_ArkMod
 {
+    [StaticConstructorOnStartup]
     public static class SpecimenMutationTabDrawer
     {
+
         public class MutationNode
         {
             public string label;
