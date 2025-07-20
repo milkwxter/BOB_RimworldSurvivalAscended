@@ -2,10 +2,10 @@
 <Defs>
 
   <ThingDef ParentName="BOB_Yutyrannus">
-    <defName>BOB_YutyrannusAlpha</defName>
-    <label>alpha yutyrannus</label>
-    <devNote>alpha yutyrannus</devNote>
-    <description>Yutyrannus is a large, cold-adapted carnivore that commands territory with terrifying roars and herd-splitting charges. Its thick plumage and massive bulk make it a formidable apex presence across tundra and mountainous regions.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; A powerful alpha creature. Can you defeat it?</description>
+    <defName>BOB_CarnotaurusAlpha</defName>
+    <label>alpha carnotaurus</label>
+    <devNote>alpha carnotaurus</devNote>
+    <description>Carnotaurus is a fast, aggressive predator known for brutal charges and short-range ambushes. Its muscular build and horned skull make it a fearsome threat in open terrain.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; A powerful alpha creature. Can you defeat it?</description>
     <statBases>
       <MoveSpeed>7.5</MoveSpeed>
       <MarketValue>10000</MarketValue>
@@ -18,8 +18,8 @@
     </statBases>
     <race>
       <baseHungerRate>2.0</baseHungerRate>
-      <baseBodySize>2.5</baseBodySize>
-      <baseHealthScale>10</baseHealthScale>
+      <baseBodySize>1.5</baseBodySize>
+      <baseHealthScale>7.5</baseHealthScale>
       <lifeExpectancy>100</lifeExpectancy>
     </race>
     <tools>
@@ -28,20 +28,28 @@
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>31</power>
-        <cooldownTime>2</cooldownTime>
+        <power>27</power>
+        <cooldownTime>1.5</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
       </li>
       <li>
-        <label>head</label>
+        <label>horns</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Stab</li>
         </capacities>
-        <power>21</power>
-        <cooldownTime>1.5</cooldownTime>
+        <power>24</power>
+        <cooldownTime>1.2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
+        <chanceFactor>0.35</chanceFactor>
+		
+        <extraMeleeDamages>
+		  <li>
+			<def>BOB_BleedingBoost</def>
+			<amount>1</amount>
+			<chance>1.0</chance>
+		  </li>
+		</extraMeleeDamages>
       </li>
     </tools>
 	<comps>
@@ -50,9 +58,9 @@
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
-    <defName>BOB_YutyrannusAlpha</defName>
-    <label>alpha yutyrannus</label>
-    <race>BOB_YutyrannusAlpha</race>
+    <defName>BOB_CarnotaurusAlpha</defName>
+    <label>alpha carnotaurus</label>
+    <race>BOB_CarnotaurusAlpha</race>
     <combatPower>2500</combatPower>
 	<wildGroupSize>1~1</wildGroupSize>
 	<alternateGraphicChance>1</alternateGraphicChance>
@@ -66,28 +74,28 @@
       <li>
         <label>alpha yutyrannus baby</label>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Yutyrannus/Yuty</texPath>
+          <texPath>Things/Pawn/Animal/Carnotaurus/Carnotaurus</texPath>
           <drawSize>4.0</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Yutyrannus/Dessicated_Yuty_east</texPath>
+          <texPath>Things/Pawn/Animal/Carnotaurus/Dessicated_Carnotaurus_east</texPath>
           <drawSize>4.0</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Yutyrannus/Yuty</texPath>
+          <texPath>Things/Pawn/Animal/Carnotaurus/Carnotaurus</texPath>
           <drawSize>5.5</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Yutyrannus/Dessicated_Yuty_east</texPath>
+          <texPath>Things/Pawn/Animal/Carnotaurus/Dessicated_Carnotaurus_east</texPath>
           <drawSize>5.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Yutyrannus/Yuty</texPath>
-          <drawSize>7.0</drawSize>
+          <texPath>Things/Pawn/Animal/Carnotaurus/Carnotaurus</texPath>
+          <drawSize>6.5</drawSize>
           <shadowData>
             <volume>(0.75, 0.75, 0.75)</volume>
             <offset>(0,0,0)</offset>
@@ -96,8 +104,8 @@
 		  <drawOffsetWest>(1, 0, 0)</drawOffsetWest>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Yutyrannus/Dessicated_Yuty_east</texPath>
-          <drawSize>7.0</drawSize>
+          <texPath>Things/Pawn/Animal/Carnotaurus/Dessicated_Carnotaurus_east</texPath>
+          <drawSize>6.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>

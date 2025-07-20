@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef>
+		<defName>BOB_BleedingBoost</defName>
+		<label>fast bleeding</label>
+		<description>This pawn is bleeding badly. This effect increases blood loss by 5% every time it is applied.</description>
+		<defaultLabelColor>(190, 0, 0)</defaultLabelColor>
+		<isBad>true</isBad>
+		<tendable>false</tendable>
+		<hediffClass>BOB_ArkMod.Hediff_BleedingBoost</hediffClass>
+		<comps>
+		  <li Class="HediffCompProperties_Disappears">
+			<showRemainingTime>True</showRemainingTime>
+			<disappearsAfterTicks>600</disappearsAfterTicks>
+		  </li>
+		</comps>
+	</HediffDef>
+	
+	<DamageDef ParentName="Scratch">
+		<defName>BOB_BleedingBoost</defName>
+		<label>gored</label>
+		<additionalHediffs>
+		  <li>
+			<hediff>BOB_BleedingBoost</hediff>
+		  </li>
+		</additionalHediffs>
+		<applyAdditionalHediffsIfHuntingForFood>true</applyAdditionalHediffsIfHuntingForFood>
+		<impactSoundType>Slice</impactSoundType>
+	</DamageDef>
+  
+</Defs>
