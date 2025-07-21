@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="BOB_Utahraptor" ParentName="AnimalThingBase">
+    <defName>BOB_Utahraptor</defName>
+    <label>utahraptor</label>
+    <devNote>utahraptor</devNote>
+    <description>Utahraptor is a swift, pack-hunting predator known for coordinated assaults and relentless pursuit. Its enlarged sickle claws and keen intelligence make it especially dangerous in close quarters.\n\n&lt;color=#E5E54C&gt;Gameplay effect:&lt;/color&gt; Utahraptors can be trained to leap onto enemies, pinning them to the ground.</description>
+    <statBases>
+      <MoveSpeed>8.0</MoveSpeed>
+      <MarketValue>650</MarketValue>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <FilthRate>8</FilthRate>
+      <Wildness>0.8</Wildness>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>BOB_EggUtahraptorUnfert</eggUnfertilizedDef>
+        <eggFertilizedDef>BOB_EggUtahraptorFert</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>1</eggLayIntervalDays>
+        <eggCountRange>1</eggCountRange>
+      </li>
+    </comps>
+    <race>
+	  <herdAnimal>false</herdAnimal>
+      <predator>true</predator>
+      <body>BOB_Theropod</body>
+      <leatherDef>Leather_Lizard</leatherDef>
+      <baseHungerRate>1.0</baseHungerRate>
+      <baseBodySize>1.00</baseBodySize>
+      <baseHealthScale>2.0</baseHealthScale>
+      <foodType>CarnivoreAnimalStrict</foodType>
+      <trainability>Intermediate</trainability>
+      <roamMtbDays>7</roamMtbDays>
+      <mateMtbHours>8</mateMtbHours>
+      <lifeExpectancy>13</lifeExpectancy>
+      <manhunterOnTameFailChance>0.90</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1.00</manhunterOnDamageChance>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>1.0</minAge>
+          <soundWounded>m_Utahraptor_Wounded</soundWounded>
+          <soundDeath>m_Utahraptor_Death</soundDeath>
+          <soundCall>m_Utahraptor_Call</soundCall>
+          <soundAngry>m_Utahraptor_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalUncommon</li>
+    </tradeTags>
+    <tools>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>BOB_Utahraptor</defName>
+    <label>utahraptor</label>
+    <race>BOB_Utahraptor</race>
+    <combatPower>250</combatPower>
+	<wildGroupSize>3~5</wildGroupSize>
+    <lifeStages>
+      <li>
+        <label>carnotaurus baby</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Utahraptor/Utahraptor</texPath>
+          <drawSize>3.0</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Utahraptor/Dessicated_Utahraptor_east</texPath>
+          <drawSize>3.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Utahraptor/Utahraptor</texPath>
+          <drawSize>4.0</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Utahraptor/Dessicated_Utahraptor_east</texPath>
+          <drawSize>4.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Utahraptor/Utahraptor</texPath>
+          <drawSize>4.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Utahraptor/Dessicated_Utahraptor_east</texPath>
+          <drawSize>4.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+  <ThingDef ParentName="EggFertBase">
+    <defName>BOB_EggUtahraptorFert</defName>
+    <label>utahraptor egg (fert.)</label>
+    <description>Fertilized utahraptor egg. If all goes well, it should hatch into a baby utahraptor.</description>
+    <graphicData>
+      <texPath>Things/Items/Eggs/m_egg_utah</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.6</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>140.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>15</hatcherDaystoHatch>
+        <hatcherPawn>BOB_Carnotaurus</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>BOB_EggUtahraptorUnfert</defName>
+    <label>utahraptor egg (unfert.)</label>
+    <description>Unfertilized utahraptor egg. It can be eaten raw, but it's much, much better cooked.</description>
+    <graphicData>
+      <texPath>Things/Items/Eggs/m_egg_utah</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.6</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>50.0</MarketValue>
+    </statBases>
+  </ThingDef>
+
+</Defs>

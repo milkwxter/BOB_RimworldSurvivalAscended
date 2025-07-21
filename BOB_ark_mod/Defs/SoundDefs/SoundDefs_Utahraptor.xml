@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <SoundDef>
+        <defName>m_Utahraptor_Wounded</defName>
+        <context>MapOnly</context>
+        <eventNames/>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Pawns/Utahraptor/m_utahraptor_wounded</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>35</min>
+                    <max>40</max>
+                </volumeRange>
+                <pitchRange>
+                    <min>1.0</min>
+                    <max>1.1</max>
+                </pitchRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+	
+	<SoundDef>
+        <defName>m_Utahraptor_Angry</defName>
+        <context>MapOnly</context>
+        <eventNames/>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Pawns/Utahraptor/m_utahraptor_angry</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>35</min>
+                    <max>40</max>
+                </volumeRange>
+                <pitchRange>
+                    <min>1.0</min>
+                    <max>1.1</max>
+                </pitchRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+	
+	<SoundDef>
+        <defName>m_Utahraptor_Death</defName>
+        <context>MapOnly</context>
+        <eventNames/>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Pawns/Utahraptor/m_utahraptor_death</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>35</min>
+                    <max>40</max>
+                </volumeRange>
+                <pitchRange>
+                    <min>1.0</min>
+                    <max>1.1</max>
+                </pitchRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+	
+	<SoundDef>
+        <defName>m_Utahraptor_Call</defName>
+        <context>MapOnly</context>
+        <eventNames/>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Pawns/Utahraptor/m_utahraptor_call</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>35</min>
+                    <max>40</max>
+                </volumeRange>
+                <pitchRange>
+                    <min>1.0</min>
+                    <max>1.1</max>
+                </pitchRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+	
+</Defs>
